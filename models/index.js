@@ -5,6 +5,6 @@ require("dotenv").config();
 
 const MONGODB_URL = process.env.MONGODB_URL;
 
-mongoose.connect(`${MONGODB_URL}/digimon`);
+mongoose.connect(`${MONGODB_URL}/recipesapi`);
 
 module.exports = mongoose;

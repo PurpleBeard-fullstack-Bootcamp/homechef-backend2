@@ -3,13 +3,23 @@
 const express = require("express");
 const recipesRouter = express.Router();
 const recipesHandlers = require("../controllers/homechef");
-console.log(recipesHandlers);
+//console.log(recipesHandlers);
 
 recipesRouter.get("/recipesapi", recipesHandlers.getRecipesAPIHandler);
 
 recipesRouter.get("/recipes", recipesHandlers.getRecipesHandler);
 
-recipesRouter.post("/receipes", recipesHandlers.addRecipesHandler);
+// recipesRouter.get(
+//   "/recipes/ingredients",
+//   recipesHandlers.getRecipesIngredientsHandler
+// );
+
+// recipesRouter.get(
+//   "/recipes/instructions",
+//   recipesHandlers.getRecipesinstructionsHandler
+// );
+
+recipesRouter.post("/recipes", recipesHandlers.addRecipesHandler);
 
 recipesRouter.delete("/recipes/:id", recipesHandlers.deleteRecipesHandler);
 
